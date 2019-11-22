@@ -1,0 +1,23 @@
+indexes:
+- kind: recResults
+  properties:
+  - name: recTime 
+    direction: asc
+  - name: isReferenceMissing
+    direction: asc
+    
+- kind: recResults
+  properties:
+  - name: recTime 
+    direction: asc
+  - name: isCandidateMissing
+    direction: asc
+    
+- kind: recResults
+  properties:
+  - name: recTime 
+    direction: asc
+  - name: isReferenceMissing
+    direction: asc    
+  - name: isCandidateMissing
+    direction: asc
