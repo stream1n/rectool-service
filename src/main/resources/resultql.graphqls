@@ -1,0 +1,20 @@
+type Result {
+	id: ID!,
+	recTime: String,
+	tradeId: String,
+	book: String,
+	pair: String,
+	isCandidateMissing: Boolean,
+	isReferenceMissing: Boolean,
+	candidate: Float,
+	reference: Float,
+	diff: Float
+}
+
+type Query {
+	results:[Result]
+	matchedResults:[Result]
+	unmatchedResults:[Result]
+	unmatchedReference:[Result]
+	unmatchedCandidate:[Result]
+}
