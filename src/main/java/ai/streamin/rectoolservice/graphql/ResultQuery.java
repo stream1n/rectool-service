@@ -22,10 +22,6 @@ public class ResultQuery implements GraphQLQueryResolver {
         return this.resultService.getMatchedResults();
     }
 
-    public List<Result> getUnmatchedResults() {
-        return this.resultService.getUnmatchedResults();
-    }
-
     public List<Result> getUnmatchedReference() {
         return this.resultService.getUnmatchedReference();
     }

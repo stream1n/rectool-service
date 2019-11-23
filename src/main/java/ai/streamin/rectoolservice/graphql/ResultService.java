@@ -30,12 +30,6 @@ public class ResultService {
     }
 
     @Transactional(readOnly = true)
-    public List<Result> getUnmatchedResults() {
-        long latestRecTime = resultRepository.findTopByOrderByRecTimeDesc().get(0).getRecTime();
-        return resultRepository.findByRecTimeAndIsReferenceMissingAndIsCandidateMissing(latestRecTime, true, true);
-    }
-
-    @Transactional(readOnly = true)
     public List<Result> getUnmatchedReference() {
         long latestRecTime = resultRepository.findTopByOrderByRecTimeDesc().get(0).getRecTime();
         return resultRepository.findByRecTimeAndIsReferenceMissing(latestRecTime, true);

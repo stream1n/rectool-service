@@ -5,6 +5,10 @@ import org.springframework.data.annotation.Id;
 
 import lombok.Data;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+
 @Entity(name = "recResults")
 @Data
 public class Result {
@@ -21,5 +25,12 @@ public class Result {
 	private double candidate;
 	private double reference;
 	private double diff;
-	
+
+	private transient  String formattedRecTime;
+
+	// Getter and setter
+	public String getFormattedRecTime() {
+		return LocalDateTime.ofInstant(Instant.ofEpochMilli(getRecTime()), ZoneId.systemDefault()).toString();
+	}
+
 }

@@ -8,13 +8,13 @@ type Result {
 	isReferenceMissing: Boolean,
 	candidate: Float,
 	reference: Float,
-	diff: Float
+	diff: Float,
+	formattedRecTime: String
 }
 
 type Query {
 	results:[Result]
 	matchedResults:[Result]
-	unmatchedResults:[Result]
 	unmatchedReference:[Result]
 	unmatchedCandidate:[Result]
 }
